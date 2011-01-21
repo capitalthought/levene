@@ -15,8 +15,9 @@ Hoe.spec 'levene' do
   self.readme_file      = 'README.markdown'
   self.extra_rdoc_files = FileList['README.markdown']
 
-  self.extra_deps << [ 'activemodel', '>=3.0.3']
-  self.extra_deps << [ 'activesupport', '>=3.0.3']
+  self.extra_deps << [ 'activemodel', '>=3.0.3' ]
+  self.extra_deps << [ 'activesupport', '>=3.0.3' ]
+  self.extra_deps << [ 'rforce', '~>0.6.0' ]
 
   self.extra_dev_deps << [ 'nokogiri', '>=1.4.4' ]
 end

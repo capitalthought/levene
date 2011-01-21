@@ -1,17 +1,10 @@
-GIT
-  remote: git://github.com/robrasmussen/rforce.git
-  revision: bf732e58209a5406f5f5afb4c79849ddb6b23025
-  specs:
-    rforce (0.5.1)
-      builder (~> 2.0)
-      oauth (~> 0.4)
-
 PATH
   remote: .
   specs:
-    levene (0.0.1.20110120181246)
+    levene (0.0.1.20110120183512)
       activemodel (>= 3.0.3)
       activesupport (>= 3.0.3)
+      rforce (~> 0.6.0)
 
 GEM
   remote: http://rubygems.org/
@@ -32,6 +25,9 @@ GEM
     nokogiri (1.4.4)
     oauth (0.4.4)
     rake (0.8.7)
+    rforce (0.6)
+      builder (~> 2.0)
+      oauth (~> 0.4)
 
 PLATFORMS
   ruby
@@ -45,4 +41,4 @@ DEPENDENCIES
   levene!
   minitest (>= 1.6.0)
   nokogiri (>= 1.4.4)
-  rforce!
+  rforce (~> 0.6.0)
