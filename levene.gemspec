@@ -1,4 +1,3 @@
-(in /Users/robert/Projects/RecycleMatch/levene)
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
