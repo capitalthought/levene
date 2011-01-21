@@ -1,0 +1,4 @@
+partner.wsdl.xml
+pkg/*
+*.gem
+.bundle
