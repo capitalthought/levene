@@ -18,8 +18,8 @@ API counterpart:
 
 Levene depends on a few environment variables being defined:
 
-SALESFORCE_DEV_USER: The Salesforce account you're using
-SALESFORCE_DEV_PASS: Your Salesforce password + security token
+    SALESFORCE_DEV_USER: The Salesforce account you're using
+    SALESFORCE_DEV_PASS: Your Salesforce password + security token
 
 (If you don't have a Salesforce dev account or an account with API
 access, you'll have to take care of that first.)
