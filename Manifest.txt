@@ -1,11 +1,11 @@
 Manifest.txt
 README.markdown
 Rakefile
-salesforce.gemspec
-lib/salesforce.rb
-lib/salesforce/version.rb
-lib/salesforce/connection.rb
-lib/salesforce/models/lead.rb
+levene.gemspec
+lib/levene.rb
+lib/levene/version.rb
+lib/levene/connection.rb
+lib/levene/models/lead.rb
 test/helper.rb
 test/test_login.rb
 test/test_lead_model.rb

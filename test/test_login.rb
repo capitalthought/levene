@@ -1,8 +1,8 @@
 require 'helper'
 
-describe Salesforce::Connection do
+describe Levene::Connection do
   before do
-    @connection = Salesforce::Connection.new
+    @connection = Levene::Connection.new
   end
 
   it "must respond to #login" do
@@ -51,7 +51,7 @@ describe Salesforce::Connection do
       @connection.login(ENV["SALESFORCE_DEV_USER"], ENV["SALESFORCE_DEV_PASS"])
     end
 
-    it "should yield a salesforce binding from start" do
+    it "should yield a levene binding from start" do
       @connection.start do |binding|
         binding.must_be_kind_of RForce::Binding
         @connection.has_session?.must_be_true

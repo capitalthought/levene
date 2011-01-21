@@ -1,4 +1,4 @@
-module Salesforce
+module Levene
   module Models
     class Lead < Base
     end

@@ -1,12 +1,12 @@
 require 'helper'
 
-describe Salesforce::Models::Lead do
+describe Levene::Models::Lead do
   before do
-    @lead = Salesforce::Models::Lead.new
+    @lead = Levene::Models::Lead.new
   end
 
   it "should conform to ActiveModel::Naming" do
-    @lead.class.model_name.must_equal "Salesforce::Models::Lead"
+    @lead.class.model_name.must_equal "Levene::Models::Lead"
     @lead.class.model_name.human.must_equal "Lead"
   end
 

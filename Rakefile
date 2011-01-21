@@ -9,7 +9,7 @@ Hoe.plugins.delete :rubyforge
 Hoe.plugin :minitest #gem install hoe-seattlerb
 Hoe.plugin :gemspec  #gem install hoe-gemspec
 
-Hoe.spec 'salesforce' do
+Hoe.spec 'levene' do
   developer('Robert Rasmussen', 'rob.rasmussen@gmail.com')
 
   self.readme_file      = 'README.markdown'

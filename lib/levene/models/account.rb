@@ -1,4 +1,4 @@
-module Salesforce
+module Levene
   module Models
     class Account < Base
     end

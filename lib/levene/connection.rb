@@ -1,4 +1,4 @@
-module Salesforce
+module Levene
   class Connection
 
     def login(username, password)

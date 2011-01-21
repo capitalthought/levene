@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    salesforce (0.0.1.20110118120538)
+    levene (0.0.1.20110120181246)
       activemodel (>= 3.0.3)
       activesupport (>= 3.0.3)
 
@@ -42,7 +42,7 @@ DEPENDENCIES
   hoe (>= 2.8.0)
   hoe-gemspec (>= 1.0.0)
   hoe-seattlerb (>= 1.2.4)
+  levene!
   minitest (>= 1.6.0)
   nokogiri (>= 1.4.4)
   rforce!
-  salesforce!

@@ -1,7 +1,7 @@
 require 'active_model'
 require 'active_support/core_ext/class/attribute'
 
-module Salesforce
+module Levene
   module Models
     class Base
       extend ActiveModel::Naming
@@ -42,11 +42,11 @@ module Salesforce
       def to_s_object
         attributeMap = self.attributes.inject({}) do |memo, attr|
           next memo if attr.last.nil? || attr.last.blank?
-          salesforce_attr_name = attr.first.to_s.camelize
+          levene_attr_name = attr.first.to_s.camelize
           if attr.first.to_s.ends_with?("__c")
-            salesforce_attr_name.gsub!(/_c$/, "__c")
+            levene_attr_name.gsub!(/_c$/, "__c")
           end
-          memo[salesforce_attr_name] = attr.last
+          memo[levene_attr_name] = attr.last
           memo
         end
 
@@ -126,7 +126,7 @@ module Salesforce
         end
 
         def establish_connection
-          self.connection = Salesforce::Connection.new
+          self.connection = Levene::Connection.new
           self.connection.login ENV["SALESFORCE_DEV_USER"], ENV["SALESFORCE_DEV_PASS"]
         end
 

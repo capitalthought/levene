@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'minitest/autorun'
-require 'salesforce'
+require 'levene'
 
 class Object
   def must_be_true
