@@ -1,17 +1,20 @@
 # Levene
 
+* https://github.com/robrasmussen/levene
+
+
+## DESCRIPTION
+
 A light wrapper around RForce to make working with Salesforce a little
 easier.
 
-## DESCRIPTION
+## USAGE
 
 Levene allows you to easily create models that map to their Salesforce
 API counterpart:
 
     class Contact < Levene::Models::Base
     end
-
-## USAGE
 
 Levene depends on a few environment variables being defined:
 

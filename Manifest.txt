@@ -5,7 +5,14 @@ levene.gemspec
 lib/levene.rb
 lib/levene/version.rb
 lib/levene/connection.rb
+lib/levene/models/account.rb
+lib/levene/models/base.rb
+lib/levene/models/campaign.rb
+lib/levene/models/campaign_member.rb
+lib/levene/models/contact.rb
 lib/levene/models/lead.rb
+lib/levene/models/opportunity.rb
+lib/levene/extensions/binding.rb
 test/helper.rb
 test/test_login.rb
 test/test_lead_model.rb
