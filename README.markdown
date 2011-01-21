@@ -11,6 +11,17 @@ API counterpart:
     class Contact < Levene::Models::Base
     end
 
+## USAGE
+
+Levene depends on a few environment variables being defined:
+
+SALESFORCE_DEV_USER: The Salesforce account you're using
+SALESFORCE_DEV_PASS: Your Salesforce password + security token
+
+(If you don't have a Salesforce dev account or an account with API
+access, you'll have to take care of that first.)
+
+
 Creating a subclass of Levene::Models::Base will cause the fields of the
 relevant Salesforce object to be looked up, and will create accessors
 and ActiveModel validations based on the field definititions.
@@ -28,3 +39,5 @@ and ActiveModel validations based on the field definititions.
 This is not a replacement for the ActiveRecord connection adapter for
 Salesforce. Levene is mostly for people who need to push data up to 
 Salesforce in the background. *It is not thread-safe*.
+
+
