@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    levene (0.0.1.20110120183512)
+    levene (0.0.2)
       activemodel (>= 3.0.3)
       activesupport (>= 3.0.3)
       rforce (~> 0.6.0)

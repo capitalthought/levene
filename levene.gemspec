@@ -2,23 +2,23 @@
 
 Gem::Specification.new do |s|
   s.name = %q{levene}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Robert Rasmussen"]
-  s.date = %q{2011-01-20}
+  s.date = %q{2011-01-21}
   s.description = %q{A light wrapper around RForce to make working with Salesforce a little
 easier.}
   s.email = ["rob.rasmussen@gmail.com"]
   s.extra_rdoc_files = ["Manifest.txt", "README.markdown"]
-  s.files = ["Manifest.txt", "README.markdown", "Rakefile", "levene.gemspec", "lib/levene.rb", "lib/levene/version.rb", "lib/levene/connection.rb", "lib/levene/models/account.rb", "lib/levene/models/base.rb", "lib/levene/models/campaign.rb", "lib/levene/models/campaign_member.rb", "lib/levene/models/contact.rb", "lib/levene/models/lead.rb", "lib/levene/models/opportunity.rb", "lib/levene/extensions/binding.rb", "test/helper.rb", "test/test_login.rb", "test/test_lead_model.rb", "test/test_base_model.rb"]
+  s.files = ["Manifest.txt", "README.markdown", "Rakefile", "levene.gemspec", "lib/levene.rb", "lib/levene/version.rb", "lib/levene/connection.rb", "lib/levene/models/account.rb", "lib/levene/models/base.rb", "lib/levene/models/campaign.rb", "lib/levene/models/campaign_member.rb", "lib/levene/models/contact.rb", "lib/levene/models/lead.rb", "lib/levene/models/opportunity.rb", "lib/levene/extensions/binding.rb", "test/helper.rb", "test/test_login.rb", "test/test_lead_model.rb", "test/test_levene.rb", "test/test_base_model.rb"]
   s.homepage = %q{https://github.com/robrasmussen/levene}
   s.rdoc_options = ["--main", "README.markdown"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{levene}
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{A light wrapper around RForce to make working with Salesforce a little easier.}
-  s.test_files = ["test/test_base_model.rb", "test/test_lead_model.rb", "test/test_login.rb"]
+  s.test_files = ["test/test_base_model.rb", "test/test_lead_model.rb", "test/test_levene.rb", "test/test_login.rb"]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION

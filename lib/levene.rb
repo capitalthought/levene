@@ -16,6 +16,10 @@ module Levene
   module Extensions
     autoload :Binding, "levene/extensions/binding.rb"
   end
+
+  def self.enabled?
+    !ENV["SALESFORCE_DEV_USER"].nil? && !ENV["SALESFORCE_DEV_PASS"].nil?
+  end
 end
 
 RForce::Binding.send(:include, Levene::Extensions::Binding)

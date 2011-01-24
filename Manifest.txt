@@ -16,3 +16,4 @@ lib/levene/extensions/binding.rb
 test/helper.rb
 test/test_login.rb
 test/test_lead_model.rb
+test/test_levene.rb

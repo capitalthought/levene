@@ -9,7 +9,7 @@ module Levene
     end
 
     def binding
-      @binding ||= ::RForce::Binding.new 'https://login.salesforce.com/services/Soap/u/20.0'
+      @binding ||= ::Levene.enabled? ? ::RForce::Binding.new('https://login.salesforce.com/services/Soap/u/20.0') : DummyBinding.new
     end
 
     def start
@@ -26,5 +26,15 @@ module Levene
       !self.binding.instance_variable_get("@session_id").nil?
     end
 
+  end
+
+  class DummyBinding
+    def describe(model)
+      []
+    end
+
+    def method_missing(sym, *args)
+      #pass
+    end
   end
 end
