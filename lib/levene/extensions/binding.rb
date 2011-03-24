@@ -28,7 +28,7 @@ module Levene
 
       def create(model)
         return false unless model.valid?
-        result = call_remote(:create, model.to_s_object)
+        result = call_remote(:create, model.to_s_object(:creatable))
         if result[:Fault]
           raise result[:Fault][:faultstring]
         else
@@ -38,6 +38,22 @@ module Levene
           else
             model.errors.add_to_base(result[:createResponse][:result][:errors][:message])
             return false
+          end
+        end
+      end
+
+      def update(model)
+        return false unless model.valid?
+        result = call_remote(:update, model.to_s_object(:updatable))
+        if result[:Fault]
+          raise result[:Fault][:faultstring]
+        else
+          debugger
+          if result[:updateResponse][:result][:success] == "false"
+            model.errors.add_to_base(result[:updateResponse][:result][:errors][:message])
+            return false
+          else
+            return true
           end
         end
       end

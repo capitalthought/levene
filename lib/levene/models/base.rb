@@ -39,7 +39,7 @@ module Levene
         end
       end
 
-      def to_s_object
+      def to_s_object(filter=:creatable)
         attributeMap = self.attributes.inject({}) do |memo, attr|
           next memo if attr.last.nil? || attr.last.blank?
           levene_attr_name = attr.first.to_s.camelize
@@ -50,7 +50,7 @@ module Levene
           memo
         end
 
-        fieldsToNull = self.attributes.select {|k,v| self.class.column_hash[k][:createable] == "true" && (v.nil? || v.blank?)}.collect {|k,v| k.to_s.camelize}
+        fieldsToNull = self.attributes.select {|k,v| self.class.column_hash[k][filter] == "true" && (v.nil? || v.blank?)}.collect {|k,v| k.to_s.camelize}
         fieldsToNull = fieldsToNull.collect {|k| k[0].downcase + k[1..-1]}
         
         {:sObject => {"xsi:type" => self.class.model_name.demodulize}.merge(attributeMap)}
