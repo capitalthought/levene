@@ -1,7 +1,7 @@
 module Levene
   module Extensions
     module Binding
-
+      DELETE_ID_LIMIT = 200
       def logout
         response = call_remote(:logout, [])
         @session_id = nil
@@ -49,10 +49,12 @@ module Levene
           return true
         end
       end
-      
+            
       def delete(models)
         ids = models.collect { |m| [:ids, m.id] }.flatten
-        result = call_api(:delete, ids)
+        ids.each_slice(DELETE_ID_LIMIT) do |group|
+          result = call_api(:delete, group)
+        end
       end
       
     end

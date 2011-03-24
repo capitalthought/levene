@@ -80,6 +80,10 @@ module Levene
           results = self.connection.find(self,ids)
         end
 
+        def delete_all
+          self.connection.binding.delete(find_by_soql(''))
+        end
+
         def escape_single_quotes str
           str.gsub("'","\\'")
         end
