@@ -76,6 +76,10 @@ module Levene
           results = self.connection.find(self,ids)
         end
 
+        def escape_single_quotes str
+          str.gsub("'","\\'")
+        end
+        
         def find_by_soql(query)
           result = self.connection.binding.query(self, query)
           return [] if result == [nil]
