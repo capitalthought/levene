@@ -38,6 +38,10 @@ module Levene
           self.connection.binding.update(self)
         end
       end
+      
+      def delete
+        self.connection.binding.delete([self])
+      end
 
       def to_s_object(filter=:creatable)
         attributeMap = self.attributes.inject({}) do |memo, attr|
