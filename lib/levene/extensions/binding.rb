@@ -41,7 +41,7 @@ module Levene
 
       def update(model)
         return false unless model.valid?
-        result = call_api(:update, model.to_s_object(:updatable))
+        result = call_api(:update, model.to_s_object(:updateable))
         if result[:updateResponse][:result][:success] == "false"
           model.errors.add_to_base(result[:updateResponse][:result][:errors][:message])
           return false

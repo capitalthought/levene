@@ -43,9 +43,9 @@ module Levene
         self.connection.binding.delete([self])
       end
 
-      def to_s_object(filter=:creatable)
+      def to_s_object(filter_on=:creatable)
         attributeMap = self.attributes.inject({}) do |memo, attr|
-          next memo if attr.last.nil? || attr.last.blank?
+          next memo if attr.last.nil? || attr.last.blank? || (attr.first != :id && self.class.column_hash[attr.first][filter_on] == 'false')
           levene_attr_name = attr.first.to_s.camelize
           if attr.first.to_s.ends_with?("__c")
             levene_attr_name.gsub!(/_c$/, "__c")
@@ -53,10 +53,6 @@ module Levene
           memo[levene_attr_name] = attr.last
           memo
         end
-
-        fieldsToNull = self.attributes.select {|k,v| self.class.column_hash[k][filter] == "true" && (v.nil? || v.blank?)}.collect {|k,v| k.to_s.camelize}
-        fieldsToNull = fieldsToNull.collect {|k| k[0].downcase + k[1..-1]}
-        
         {:sObject => {"xsi:type" => self.class.model_name.demodulize}.merge(attributeMap)}
       end
 
